@@ -1,8 +1,11 @@
 package co.edu.usbcali.travelusb.repository;
 
+
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,11 +17,11 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
 	//List<Cliente> findClienteByEstadoOrderBy(String a);
 	
-	List<Cliente> findClientByCorreoIgnoreCase(String a);
+	public Page<Cliente> findByEstadoOrderByNumeroIdeAsc(String a, Pageable pageable);
 	
-	List<Cliente> findClientByNumeroIdeLike(Integer a);
+	public List<Cliente> findByCorreo(String a);
 	
-	//List<Cliente> findClientByNameIgnoreCaseLike(Cliente cliente);
+	List<Cliente> findNumeroIdeOrderLike(Integer a);
 	
 	//List<Cliente> findDate(Date a, Date b);
 	

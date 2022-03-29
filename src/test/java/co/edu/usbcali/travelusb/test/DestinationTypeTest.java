@@ -27,9 +27,6 @@ class DestinationTypeTest {
 			System.out.println(destinationType.getDestination());
 		
 		}
-		
-		
 	}
-	
 
 }

@@ -9,9 +9,8 @@ import co.edu.usbcali.travelusb.domain.TipoIdentificacion;
 
 public interface TipoIdentificacionRepository extends JpaRepository<TipoIdentificacion, Integer>{
 
-	List<TipoIdentificacion> findTipoIdentificacionByEstado(String a);
+	List<TipoIdentificacion> findByEstadoOrderByNombreAsc(String a);
 	
-	List<TipoIdentificacion> findTipoIdentificacionByCodigoAndEstado(String a, String b);
 	
 	
 		

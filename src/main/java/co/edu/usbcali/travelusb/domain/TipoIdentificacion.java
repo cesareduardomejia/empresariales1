@@ -44,6 +44,9 @@ public class TipoIdentificacion {
 	@Column(name="id_tiid")
 	private Integer idTiid;
 	
+	@Column(name="nombre")
+	private String nombre;
+	
 	@Column(name="codigo")
 	private String codigo;
 	
@@ -64,6 +67,16 @@ public class TipoIdentificacion {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy="tipoIde")
 	private List<Cliente> cliente = new ArrayList<>();
+	
+	
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
 	public Integer getIdTiid() {
 		return idTiid;
@@ -128,7 +141,12 @@ public class TipoIdentificacion {
 	public void setCliente(List<Cliente> cliente) {
 		this.cliente = cliente;
 	}
+
+	public TipoIdentificacion() {
+		super();
+	}
 		
+	
 
 }
 

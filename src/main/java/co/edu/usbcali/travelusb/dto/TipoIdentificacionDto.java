@@ -9,12 +9,21 @@ public class TipoIdentificacionDto {
 
 
 	private Integer idTiid;
+	private String nombre;
 	private String codigo;
 	private Date fechaCreacion;
 	private Date fechaModificacion;
 	private String usuCreador;
 	private String usuModificador;
 	private String estado;
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 	public Integer getIdTiid() {
 		return idTiid;
 	}
